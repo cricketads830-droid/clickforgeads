@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClickForge Ads — Performance Marketing for Growing Brands</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2061866604747292');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2061866604747292&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --orange: #FF5C00; --orange-light: #FF7A2F;
+    --orange-dim: rgba(255,92,0,0.12);
+    --black: #0A0A0A; --dark: #111111; --card: #161616;
+    --border: rgba(255,255,255,0.08); --border-orange: rgba(255,92,0,0.3);
+    --text: #FFFFFF; --text-muted: #888888; --text-sub: #BBBBBB;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--text); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+    background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 800; text-decoration: none; letter-spacing: -0.03em; display: flex; align-items: baseline; }
+  .logo-click { color: #fff; } .logo-forge { color: var(--orange); }
+  .logo-ads { color: var(--text-muted); font-weight: 500; font-size: 16px; margin-left: 5px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { background: var(--orange); color: #fff; padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: background 0.2s; }
+  .nav-cta::after { content: '↗'; font-size: 12px; }
+  .nav-cta:hover { background: var(--orange-light); }
+
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 5% 80px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 900px; height: 600px; background: radial-gradient(ellipse, rgba(255,92,0,0.12) 0%, transparent 70%); pointer-events: none; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid var(--border-orange); color: var(--orange); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 28px; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .hero-badge::before { content: '●'; font-size: 8px; animation: pulse 2s infinite; }
+  .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 72px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; max-width: 860px; }
+  .hero h1 em { font-style: normal; color: var(--orange); }
+  .hero-sub { font-size: clamp(15px, 2vw, 18px); color: var(--text-sub); max-width: 580px; line-height: 1.7; margin-bottom: 14px; }
+  .hero-note { font-size: 14px; color: var(--text-muted); margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .hero-note strong { color: var(--orange); }
+  @keyframes greenPulse { 0%{box-shadow:0 0 0 0 rgba(34,197,94,0.6);}70%{box-shadow:0 0 0 9px rgba(34,197,94,0);}100%{box-shadow:0 0 0 0 rgba(34,197,94,0);} }
+  .green-dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; flex-shrink: 0; animation: greenPulse 1.8s ease-out infinite; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 56px; }
+  .btn-primary { background: var(--orange); color: #fff; padding: 14px 32px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 14px 32px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; transition: border-color 0.2s; }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+  .stats-outer { max-width: 860px; width: 100%; }
+  .live-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 6px 6px 0 0; }
+  .live-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; opacity: 0.9; animation: greenPulse 1.8s ease-out infinite; }
+  .stats-strip { display: flex; flex-wrap: wrap; border: 1px solid var(--border-orange); border-radius: 0 8px 8px 8px; overflow: hidden; background: var(--card); width: 100%; }
+  .stat-item { flex: 1; min-width: 130px; padding: 22px 16px; border-right: 1px solid var(--border); text-align: center; }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: var(--orange); display: block; }
+  .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 5px; line-height: 1.4; }
+
+  .logo3d-section { position: relative; background: var(--dark); padding: 56px 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+  .brand-row { width: 100%; overflow: hidden; padding: 16px 0; }
+  .brand-marquee { display: flex; white-space: nowrap; width: max-content; }
+  .brand-logo { display: inline-flex; align-items: center; padding: 9px 20px; margin: 0 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.5); white-space: nowrap; }
+  .bl-boat    { color: rgba(255,92,0,0.8);   border-color: rgba(255,92,0,0.2); }
+  .bl-mama    { color: rgba(90,180,90,0.8);   border-color: rgba(90,180,90,0.2); }
+  .bl-noise   { color: rgba(100,160,255,0.8); border-color: rgba(100,160,255,0.2); }
+  .bl-sugar   { color: rgba(220,80,140,0.8);  border-color: rgba(220,80,140,0.2); }
+  .bl-urban   { color: rgba(255,190,0,0.8);   border-color: rgba(255,190,0,0.2); }
+  .bl-zepto   { color: rgba(255,0,102,0.75);  border-color: rgba(255,0,102,0.2); }
+  .bl-meesho  { color: rgba(174,77,255,0.8);  border-color: rgba(174,77,255,0.2); }
+  .bl-wow     { color: rgba(255,140,0,0.8);   border-color: rgba(255,140,0,0.2); }
+  .bl-licious { color: rgba(255,80,80,0.8);   border-color: rgba(255,80,80,0.2); }
+  .bl-blinkx  { color: rgba(60,180,220,0.8);  border-color: rgba(60,180,220,0.2); }
+  @keyframes mRTL { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @keyframes mLTR  { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+  .marquee-rtl { animation: mRTL 20s linear infinite; }
+  .marquee-ltr { animation: mLTR 20s linear infinite; }
+
+  .logo3d-wrap { position: relative; z-index: 10; margin: 10px 0; cursor: pointer; perspective: 800px; }
+  @keyframes floatY { 0%,100%{transform:translateY(0) rotateX(8deg) rotateY(-12deg);}50%{transform:translateY(-18px) rotateX(8deg) rotateY(12deg);} }
+  .logo3d-inner { position: relative; transform-style: preserve-3d; animation: floatY 3.5s ease-in-out infinite; transition: transform 0.1s ease-out; }
+  @keyframes glowPulse { 0%,100%{opacity:0.7;transform:scale(1);}50%{opacity:1;transform:scale(1.15);} }
+  .logo3d-glow { position: absolute; inset: -30px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,92,0,0.4) 0%, transparent 70%); filter: blur(24px); animation: glowPulse 3.5s ease-in-out infinite; z-index: 0; }
+  .logo3d-card { position: relative; z-index: 2; background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid rgba(255,92,0,0.4); border-radius: 20px; padding: 28px 44px; text-align: center; box-shadow: 0 0 0 1px rgba(255,92,0,0.15), 0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(255,92,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06); }
+  .logo3d-card::before { content: ''; position: absolute; inset: 0; border-radius: 20px; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%); pointer-events: none; }
+  @keyframes iconSpin { 0%,100%{transform:rotateY(0deg);}50%{transform:rotateY(180deg);} }
+  .logo3d-icon { font-size: 36px; margin-bottom: 8px; filter: drop-shadow(0 0 12px rgba(255,92,0,0.8)); animation: iconSpin 6s ease-in-out infinite; }
+  .logo3d-text { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; display: block; margin-bottom: 4px; }
+  .l3d-click { color: #fff; } .l3d-forge { color: var(--orange); text-shadow: 0 0 20px rgba(255,92,0,0.6); }
+  .logo3d-sub { font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; color: var(--text-muted); text-transform: uppercase; }
+
+  .ticker-wrap { padding: 18px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; background: var(--dark); }
+  .ticker-inner { display: flex; animation: mRTL 12s linear infinite; white-space: nowrap; }
+  .ticker-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 28px; font-size: 13px; font-weight: 500; color: var(--text-muted); border-right: 1px solid var(--border); }
+  .ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+
+  section { padding: 90px 5%; }
+  .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: var(--orange); text-transform: uppercase; margin-bottom: 14px; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 46px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+  .section-title em { font-style: normal; color: var(--orange); }
+  .section-sub { font-size: 16px; color: var(--text-muted); max-width: 520px; line-height: 1.65; margin-bottom: 52px; }
+
+  #results { background: var(--dark); }
+  .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+  .result-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+  .result-card:hover { border-color: var(--border-orange); transform: translateY(-4px); }
+  .result-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); }
+  .card-icon { font-size: 26px; margin-bottom: 14px; }
+  .card-tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--orange); background: var(--orange-dim); border-radius: 4px; padding: 3px 9px; margin-bottom: 9px; }
+  .card-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; }
+  .card-metrics { display: flex; gap: 10px; flex-wrap: wrap; }
+  .metric-pill { font-size: 12px; font-weight: 600; color: var(--orange); background: var(--orange-dim); border: 1px solid var(--border-orange); padding: 4px 11px; border-radius: 999px; }
+
+  .result-ticker-wrap { overflow: hidden; margin-top: 44px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 0; }
+  .result-ticker { display: flex; animation: mRTL 10s linear infinite; white-space: nowrap; }
+  .result-ticker-item { display: inline-flex; align-items: center; gap: 8px; padding: 0 24px; border-right: 1px solid var(--border); font-size: 12px; color: var(--text-muted); font-weight: 500; }
+  .result-ticker-item strong { color: var(--text); }
+
+  #who { background: var(--black); }
+  .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .who-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; transition: border-color 0.2s; }
+  .who-card:hover { border-color: var(--border-orange); }
+  .who-icon { font-size: 28px; margin-bottom: 12px; }
+  .who-title { font-size: 16px; font-weight: 700; margin-bottom: 7px; }
+  .who-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+  .who-stat { font-size: 12px; font-weight: 600; color: var(--orange); }
+
+  #services { background: var(--dark); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .service-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: border-color 0.2s, transform 0.2s; display: flex; gap: 18px; }
+  .service-card:hover { border-color: var(--border-orange); transform: translateY(-3px); }
+  .service-num { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: var(--orange-dim); line-height: 1; flex-shrink: 0; width: 44px; }
+  .service-icon { font-size: 22px; margin-bottom: 9px; }
+  .service-title { font-size: 16px; font-weight: 700; margin-bottom: 7px; }
+  .service-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  #process { background: var(--black); }
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+  .process-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
+  .process-step { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: var(--orange); color: #fff; border-radius: 8px; font-weight: 700; font-size: 15px; margin-bottom: 18px; }
+  .process-stage { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 7px; }
+  .process-title { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+  .process-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
+  .process-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .process-tag { font-size: 11px; color: var(--text-sub); background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 4px; padding: 3px 9px; }
+  .process-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--orange); text-decoration: none; margin-top: 14px; transition: gap 0.2s; }
+  .process-cta:hover { gap: 10px; }
+
+  #testimonials { background: var(--dark); }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+  .testi-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; transition: border-color 0.2s; }
+  .testi-card:hover { border-color: var(--border-orange); }
+  .testi-stars { color: var(--orange); font-size: 13px; margin-bottom: 12px; letter-spacing: 2px; }
+  .testi-text { font-size: 14px; color: var(--text-sub); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+  .testi-author { display: flex; gap: 11px; align-items: center; }
+  .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--orange); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .testi-name { font-size: 13px; font-weight: 600; }
+  .testi-role { font-size: 11px; color: var(--text-muted); }
+  .testi-metric { font-size: 11px; font-weight: 600; color: var(--orange); margin-top: 2px; }
+
+  #faq { background: var(--black); }
+  .faq-wrap { max-width: 720px; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+  .faq-item.open { border-color: var(--border-orange); }
+  .faq-q { width: 100%; text-align: left; background: var(--card); color: var(--text); border: none; cursor: pointer; padding: 18px 22px; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 14px; font-family: 'Inter', sans-serif; }
+  .faq-arrow { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; color: var(--orange); transition: transform 0.3s; }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; background: var(--card); font-size: 13px; color: var(--text-muted); line-height: 1.7; padding: 0 22px; }
+  .faq-a.open { max-height: 200px; padding: 0 22px 18px; }
+
+  #cta { background: var(--dark); text-align: center; padding: 90px 5%; position: relative; overflow: hidden; }
+  #cta::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(255,92,0,0.1) 0%, transparent 65%); }
+  .cta-badge { display: inline-flex; gap: 8px; align-items: center; background: var(--orange-dim); border: 1px solid var(--border-orange); color: var(--orange); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 999px; margin-bottom: 22px; }
+  #cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 4vw, 48px); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+  #cta h2 em { font-style: normal; color: var(--orange); }
+  #cta p { font-size: 16px; color: var(--text-muted); max-width: 480px; margin: 0 auto 32px; line-height: 1.65; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta-phone { font-size: 13px; color: var(--text-muted); margin-top: 18px; }
+  .cta-phone a { color: var(--orange); text-decoration: none; font-weight: 600; }
+  .cta-note { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+  footer { background: var(--black); border-top: 1px solid var(--border); padding: 56px 5% 32px; }
+  .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 44px; }
+  .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; display: block; margin-bottom: 11px; }
+  .footer-logo .logo-forge { color: var(--orange); }
+  .footer-tagline { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; }
+  .footer-socials { display: flex; gap: 9px; }
+  .social-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+  .social-btn:hover { border-color: var(--orange); color: var(--orange); }
+  .footer-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 14px; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 9px; }
+  .footer-col a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--orange); }
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--text-muted); }
+  .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--orange); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .service-card { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-logo"><span class="logo-click">Click</span><span class="logo-forge">Forge</span><span class="logo-ads">Ads</span></a>
+  <ul class="nav-links">
+    <li><a href="#results">Results</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Get In Touch</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-badge">Fresh Agency · Big Results · Lucknow</div>
+  <h1>We Help Small Brands<br>Grow with <em>Smart Ad Spend.</em></h1>
+  <p class="hero-sub">We're a young performance marketing team from Lucknow — focused on getting real, measurable results for D2C brands, local businesses, and early-stage startups. No fluff. Just growth.</p>
+  <p class="hero-note"><span class="green-dot"></span>Currently accepting <strong>new clients for July 2026</strong></p>
+  <div class="hero-btns">
+    <a href="#cta" class="btn-primary" onclick="fbq('track','Lead',{content_name:'Book Free Strategy Call - Hero'})">Book a Free Strategy Call</a>
+    <a href="#results" class="btn-secondary">See Our Work →</a>
+  </div>
+  <div class="stats-outer">
+    <div class="live-badge"><span class="live-badge-dot"></span>Our Numbers So Far</div>
+    <div class="stats-strip">
+      <div class="stat-item"><span class="stat-num" id="s1">0L+</span><div class="stat-label">Revenue Generated<br>for Our Clients</div></div>
+      <div class="stat-item"><span class="stat-num" id="s2">0×</span><div class="stat-label">Avg. ROAS<br>Delivered</div></div>
+      <div class="stat-item"><span class="stat-num" id="s3">0%</span><div class="stat-label">Avg. CPA<br>Reduction</div></div>
+      <div class="stat-item"><span class="stat-num" id="s4">0+</span><div class="stat-label">Campaigns<br>Launched</div></div>
+      <div class="stat-item"><span class="stat-num" id="s5">0★</span><div class="stat-label">Client<br>Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D LOGO + BRAND MARQUEE -->
+<div class="logo3d-section">
+  <div class="brand-row">
+    <div class="brand-marquee marquee-rtl">
+      <div class="brand-logo bl-boat">boAt</div>
+      <div class="brand-logo bl-mama">Mamaearth</div>
+      <div class="brand-logo bl-noise">Noise</div>
+      <div class="brand-logo bl-sugar">SUGAR Cosmetics</div>
+      <div class="brand-logo bl-urban">UrbanCompany</div>
+      <div class="brand-logo bl-zepto">Zepto</div>
+      <div class="brand-logo bl-meesho">Meesho</div>
+      <div class="brand-logo bl-wow">WOW Skin</div>
+      <div class="brand-logo bl-licious">Licious</div>
+      <div class="brand-logo bl-blinkx">BlinkX</div>
+      <div class="brand-logo bl-boat">boAt</div>
+      <div class="brand-logo bl-mama">Mamaearth</div>
+      <div class="brand-logo bl-noise">Noise</div>
+      <div class="brand-logo bl-sugar">SUGAR Cosmetics</div>
+      <div class="brand-logo bl-urban">UrbanCompany</div>
+      <div class="brand-logo bl-zepto">Zepto</div>
+      <div class="brand-logo bl-meesho">Meesho</div>
+      <div class="brand-logo bl-wow">WOW Skin</div>
+      <div class="brand-logo bl-licious">Licious</div>
+      <div class="brand-logo bl-blinkx">BlinkX</div>
+    </div>
+  </div>
+
+  <div class="logo3d-wrap" id="logo3d">
+    <div class="logo3d-inner" id="logo3d-inner">
+      <div class="logo3d-glow"></div>
+      <div class="logo3d-card">
+        <div class="logo3d-icon">⚡</div>
+        <div class="logo3d-text"><span class="l3d-click">Click</span><span class="l3d-forge">Forge</span></div>
+        <div class="logo3d-sub">ADS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-row">
+    <div class="brand-marquee marquee-ltr">
+      <div class="brand-logo bl-wow">WOW Skin</div>
+      <div class="brand-logo bl-blinkx">BlinkX</div>
+      <div class="brand-logo bl-mama">Mamaearth</div>
+      <div class="brand-logo bl-sugar">SUGAR Cosmetics</div>
+      <div class="brand-logo bl-noise">Noise</div>
+      <div class="brand-logo bl-boat">boAt</div>
+      <div class="brand-logo bl-zepto">Zepto</div>
+      <div class="brand-logo bl-meesho">Meesho</div>
+      <div class="brand-logo bl-urban">UrbanCompany</div>
+      <div class="brand-logo bl-licious">Licious</div>
+      <div class="brand-logo bl-wow">WOW Skin</div>
+      <div class="brand-logo bl-blinkx">BlinkX</div>
+      <div class="brand-logo bl-mama">Mamaearth</div>
+      <div class="brand-logo bl-sugar">SUGAR Cosmetics</div>
+      <div class="brand-logo bl-noise">Noise</div>
+      <div class="brand-logo bl-boat">boAt</div>
+      <div class="brand-logo bl-zepto">Zepto</div>
+      <div class="brand-logo bl-meesho">Meesho</div>
+      <div class="brand-logo bl-urban">UrbanCompany</div>
+      <div class="brand-logo bl-licious">Licious</div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <div class="ticker-item"><div class="ticker-dot"></div>Meta Ads Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Google Ads</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>YouTube Advertising</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Performance Creative</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>D2C Brand Growth</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>WhatsApp Funnels</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Analytics & Reporting</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Local Business Ads</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Meta Ads Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Google Ads</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>YouTube Advertising</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Performance Creative</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>D2C Brand Growth</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>WhatsApp Funnels</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Analytics & Reporting</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Local Business Ads</div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Early Results We're <em>Proud Of.</em></h2>
+  <p class="section-sub">We're just getting started — but every campaign we've run has delivered real, trackable results for our clients. Here's what we've done so far.</p>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="card-icon">👗</div>
+      <div class="card-tag">D2C Clothing</div>
+      <div class="card-title">Local Fashion Brand, Lucknow</div>
+      <div class="card-desc">A small Lucknow-based clothing brand wanted to sell online. We ran Meta ads with simple product creatives and took them from 0 to consistent daily orders in 6 weeks.</div>
+      <div class="card-metrics"><span class="metric-pill">3.2× ROAS</span><span class="metric-pill">₹45K Revenue/mo</span></div>
+    </div>
+    <div class="result-card">
+      <div class="card-icon">🍕</div>
+      <div class="card-tag">Food & Restaurant</div>
+      <div class="card-title">Cloud Kitchen, UP</div>
+      <div class="card-desc">New cloud kitchen needed local orders fast. Instagram + Google local ads brought in 80+ orders in the first month at a very low cost per order.</div>
+      <div class="card-metrics"><span class="metric-pill">80+ Orders · Month 1</span><span class="metric-pill">₹18 Cost/Order</span></div>
+    </div>
+    <div class="result-card">
+      <div class="card-icon">🎓</div>
+      <div class="card-tag">Coaching / EdTech</div>
+      <div class="card-title">Online Coaching, Lucknow</div>
+      <div class="card-desc">A coaching institute wanted more student inquiries. We built a simple WhatsApp funnel with Meta lead ads and cut their cost per lead by 40% in 3 weeks.</div>
+      <div class="card-metrics"><span class="metric-pill">−40% CPL</span><span class="metric-pill">60+ Leads/mo</span></div>
+    </div>
+    <div class="result-card">
+      <div class="card-icon">💄</div>
+      <div class="card-tag">Beauty</div>
+      <div class="card-title">Homemade Skincare Brand</div>
+      <div class="card-desc">A small homemade skincare brand from Kanpur was only selling locally. We ran targeted Meta ads and helped them get their first 30 online orders from across India.</div>
+      <div class="card-metrics"><span class="metric-pill">First 30 Online Orders</span><span class="metric-pill">4.1× ROAS</span></div>
+    </div>
+    <div class="result-card">
+      <div class="card-icon">🏋️</div>
+      <div class="card-tag">Fitness</div>
+      <div class="card-title">Personal Trainer, Lucknow</div>
+      <div class="card-desc">A personal trainer wanted online clients. We ran Instagram ads with testimonial-style creatives and got him 12 new paying clients in the first month.</div>
+      <div class="card-metrics"><span class="metric-pill">12 New Clients</span><span class="metric-pill">₹220 Cost/Lead</span></div>
+    </div>
+    <div class="result-card">
+      <div class="card-icon">🛋️</div>
+      <div class="card-tag">Home Decor</div>
+      <div class="card-title">Handmade Home Decor, UP</div>
+      <div class="card-desc">A handmade home decor seller on Instagram wanted to scale. We ran Meta catalog ads and tripled their monthly revenue in 45 days without increasing spend much.</div>
+      <div class="card-metrics"><span class="metric-pill">3× Revenue · 45 Days</span><span class="metric-pill">5.6× ROAS</span></div>
+    </div>
+  </div>
+
+  <div class="result-ticker-wrap">
+    <div class="result-ticker">
+      <div class="result-ticker-item"><strong>3.2× ROAS</strong> · Fashion · Meta Ads</div>
+      <div class="result-ticker-item"><strong>80+ Orders</strong> · Cloud Kitchen · Month 1</div>
+      <div class="result-ticker-item"><strong>−40% CPL</strong> · Coaching · WhatsApp Funnel</div>
+      <div class="result-ticker-item"><strong>4.1× ROAS</strong> · Skincare · First Online Orders</div>
+      <div class="result-ticker-item"><strong>12 Clients</strong> · Fitness · Instagram Ads</div>
+      <div class="result-ticker-item"><strong>3× Revenue</strong> · Home Decor · 45 Days</div>
+      <div class="result-ticker-item"><strong>₹18/Order</strong> · Food · Local Google Ads</div>
+      <div class="result-ticker-item"><strong>5.6× ROAS</strong> · Catalog Ads · Meta</div>
+      <div class="result-ticker-item"><strong>3.2× ROAS</strong> · Fashion · Meta Ads</div>
+      <div class="result-ticker-item"><strong>80+ Orders</strong> · Cloud Kitchen · Month 1</div>
+      <div class="result-ticker-item"><strong>−40% CPL</strong> · Coaching · WhatsApp Funnel</div>
+      <div class="result-ticker-item"><strong>4.1× ROAS</strong> · Skincare · First Online Orders</div>
+      <div class="result-ticker-item"><strong>12 Clients</strong> · Fitness · Instagram Ads</div>
+      <div class="result-ticker-item"><strong>3× Revenue</strong> · Home Decor · 45 Days</div>
+      <div class="result-ticker-item"><strong>₹18/Order</strong> · Food · Local Google Ads</div>
+      <div class="result-ticker-item"><strong>5.6× ROAS</strong> · Catalog Ads · Meta</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section id="who">
+  <div class="section-label">Who We Work With</div>
+  <h2 class="section-title">Best Fit for <em>Growing Brands.</em></h2>
+  <p class="section-sub">We love working with early-stage brands and small businesses who want real growth — not just big agency promises.</p>
+  <div class="who-grid">
+    <div class="who-card"><div class="who-icon">🛍️</div><div class="who-title">D2C & Small E-Commerce</div><div class="who-desc">Just launched or scaling? We'll help you get your first consistent orders and find your best-performing audience without wasting budget.</div><div class="who-stat">Starting from ₹15K/mo ad spend</div></div>
+    <div class="who-card"><div class="who-icon">🏪</div><div class="who-title">Local Businesses</div><div class="who-desc">Restaurants, salons, coaching centres, gyms — we run hyper-local ads that bring real customers through your door or to your WhatsApp.</div><div class="who-stat">Google Maps + Meta Local Ads</div></div>
+    <div class="who-card"><div class="who-icon">🎓</div><div class="who-title">Coaching & EdTech</div><div class="who-desc">Online courses, tuition centres, skill training — we build simple lead funnels that bring in consistent student inquiries every month.</div><div class="who-stat">WhatsApp-first Funnels</div></div>
+    <div class="who-card"><div class="who-icon">💄</div><div class="who-title">Beauty & Lifestyle</div><div class="who-desc">Homemade products, skincare, fashion — we help you go from selling only to family & friends to getting orders from across India.</div><div class="who-stat">Meta Catalog & Reels Ads</div></div>
+    <div class="who-card"><div class="who-icon">🍽️</div><div class="who-title">Food & Cloud Kitchens</div><div class="who-desc">New in your city? We'll get your brand in front of hungry customers nearby with affordable, high-ROI local ad campaigns.</div><div class="who-stat">Low Cost Per Order</div></div>
+    <div class="who-card"><div class="who-icon">🚀</div><div class="who-title">Startups & New Ventures</div><div class="who-desc">Just starting out? We'll help you test your market, find your first customers, and figure out what messaging actually converts.</div><div class="who-stat">Test & Learn Approach</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Simple Services. <em>Real Results.</em></h2>
+  <p class="section-sub">We keep things focused — only the services that actually move the needle for small and growing brands.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-num">01</div><div><div class="service-icon">🎯</div><div class="service-title">Meta & Instagram Ads</div><div class="service-desc">Facebook and Instagram campaigns built for your budget. We write the copy, design the creatives, and optimise until we find what works.</div></div></div>
+    <div class="service-card"><div class="service-num">02</div><div><div class="service-icon">🔍</div><div class="service-title">Google Ads</div><div class="service-desc">Search and local Google ads to capture customers who are already looking for what you sell. Great for local businesses and service providers.</div></div></div>
+    <div class="service-card"><div class="service-num">03</div><div><div class="service-icon">📱</div><div class="service-title">WhatsApp Lead Funnels</div><div class="service-desc">We build simple funnels that take someone from your ad to your WhatsApp — where real conversations and conversions happen.</div></div></div>
+    <div class="service-card"><div class="service-num">04</div><div><div class="service-icon">✍️</div><div class="service-title">Ad Creatives & Copy</div><div class="service-desc">Good ads need good creatives. We write copy and design simple but effective ad images and scripts that actually get clicks.</div></div></div>
+    <div class="service-card"><div class="service-num">05</div><div><div class="service-icon">▶️</div><div class="service-title">YouTube & Reels Ads</div><div class="service-desc">Short video ads for YouTube and Instagram Reels — affordable awareness campaigns that build trust and bring in new audiences.</div></div></div>
+    <div class="service-card"><div class="service-num">06</div><div><div class="service-icon">📊</div><div class="service-title">Reporting & Insights</div><div class="service-desc">Clear weekly reports in plain Hindi/English — what's working, what's not, and what we're doing next. No confusing jargon.</div></div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-label">How We Work</div>
+  <h2 class="section-title">Simple Process. <em>Fast Start.</em></h2>
+  <p class="section-sub">We don't do long contracts or slow onboarding. We move fast and start delivering results from week one.</p>
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-step">1</div>
+      <div class="process-stage">Week 1</div>
+      <div class="process-title">📞 Free Strategy Call</div>
+      <div class="process-desc">We hop on a call, understand your business, your goals, and your current challenges. Then we tell you honestly what ads can do for you — and what budget makes sense to start.</div>
+      <div class="process-tags"><span class="process-tag">Free Consultation</span><span class="process-tag">No Commitment</span><span class="process-tag">Honest Advice</span></div>
+      <a href="#cta" class="process-cta" onclick="fbq('track','Lead',{content_name:'Book Free Call - Process'})">Book Your Free Call →</a>
+    </div>
+    <div class="process-card">
+      <div class="process-step">2</div>
+      <div class="process-stage">Week 1–2</div>
+      <div class="process-title">⚡ Setup & Launch</div>
+      <div class="process-desc">We set up your ad accounts, create the first batch of creatives, and launch your campaigns — usually within 7 days of onboarding. Fast, clean, and ready to test.</div>
+      <div class="process-tags"><span class="process-tag">Ad Account Setup</span><span class="process-tag">Creative Production</span><span class="process-tag">Campaign Launch</span></div>
+      <a href="#cta" class="process-cta">Get Started →</a>
+    </div>
+    <div class="process-card">
+      <div class="process-step">3</div>
+      <div class="process-stage">Month 1 Onwards</div>
+      <div class="process-title">📈 Optimise & Grow</div>
+      <div class="process-desc">We monitor your campaigns daily, test new creatives every week, and optimise based on data. You get a clear weekly report — and we're always available on WhatsApp for updates.</div>
+      <div class="process-tags"><span class="process-tag">Weekly Reports</span><span class="process-tag">WhatsApp Support</span><span class="process-tag">Continuous Testing</span></div>
+      <a href="#cta" class="process-cta">Let's Grow Together →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label">Client Reviews</div>
+  <h2 class="section-title">What Our <em>Early Clients Say.</em></h2>
+  <p class="section-sub">We're building trust one client at a time. Here's honest feedback from the brands we've worked with.</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Maine pehle bohot agency se baat ki thi par sabne bade bade vaade diye. ClickForge ne seedha kaam ki baat ki aur results bhi diye. Mera fashion brand ab daily orders le raha hai."</p>
+      <div class="testi-author"><div class="testi-avatar">SK</div><div><div class="testi-name">Sakshi Kapoor</div><div class="testi-role">Founder, Local Fashion Brand · Lucknow</div><div class="testi-metric">📈 3.2× ROAS · 6 Weeks</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Humara cloud kitchen naya tha, koi brand nahi tha. Inke local ads se pehle mahine mein hi 80+ orders aaye. Bahut affordable aur professional team hai."</p>
+      <div class="testi-author"><div class="testi-avatar">RM</div><div><div class="testi-name">Rajan Mishra</div><div class="testi-role">Owner, Cloud Kitchen · Kanpur</div><div class="testi-metric">🍕 80+ Orders · Month 1</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"My coaching centre was struggling with student inquiries. ClickForge set up a WhatsApp funnel and within 3 weeks our leads cost dropped by 40%. Very happy with the transparency."</p>
+      <div class="testi-author"><div class="testi-avatar">AP</div><div><div class="testi-name">Anita Pandey</div><div class="testi-role">Director, Online Coaching · Lucknow</div><div class="testi-metric">📉 −40% CPL · 3 Weeks</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"I was only selling to people I knew personally. ClickForge ran Meta ads for my skincare brand and I got my first 30 orders from strangers across India. That felt amazing!"</p>
+      <div class="testi-author"><div class="testi-avatar">PV</div><div><div class="testi-name">Priya Verma</div><div class="testi-role">Founder, Homemade Skincare · Kanpur</div><div class="testi-metric">🌿 First 30 Online Orders</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"As a personal trainer I had no idea how to get online clients. The team explained everything simply, ran Instagram ads, and got me 12 new paying clients in one month. Highly recommend."</p>
+      <div class="testi-author"><div class="testi-avatar">VS</div><div><div class="testi-name">Vikash Singh</div><div class="testi-role">Personal Trainer · Lucknow</div><div class="testi-metric">💪 12 New Clients · 1 Month</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Hamari home decor shop sirf Instagram pe thi. Inke catalog ads se 45 din mein revenue teen guna ho gaya. Sach mein shukriya ClickForge team ko!"</p>
+      <div class="testi-author"><div class="testi-avatar">NG</div><div><div class="testi-name">Neha Gupta</div><div class="testi-role">Owner, Handmade Home Decor · UP</div><div class="testi-metric">🏠 3× Revenue · 45 Days</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">Questions You <em>Might Have.</em></h2>
+  <div class="faq-wrap">
+    <div class="faq-item open"><button class="faq-q" onclick="toggleFaq(this)">Kitna budget chahiye shuru karne ke liye?<span class="faq-arrow">+</span></button><div class="faq-a open">Aap ₹10,000–15,000/month ad spend ke saath bhi shuru kar sakte hain. Hum aapke budget ke hisab se realistic goals set karte hain. Agency fee alag hoti hai jo campaign size ke hisaab se hoti hai — pehle free call mein discuss kar lete hain.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Kya aap sirf Lucknow ke clients ke saath kaam karte hain?<span class="faq-arrow">+</span></button><div class="faq-a">Nahi! Hum poore India mein clients ke saath kaam karte hain. Lucknow mein hain lekin digital work ke liye location matter nahi karta. WhatsApp aur video calls se sab kuch manage ho jata hai.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Results kitne time mein dikhenge?<span class="faq-arrow">+</span></button><div class="faq-a">Honestly — pehle 2 weeks testing phase hota hai. Meaningful results usually 4–6 weeks mein dikhne lagte hain. Hum aapko shuru se hi realistic expectations dete hain — koi bhi overnight miracle nahi hota.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Kya aap creatives bhi banate hain?<span class="faq-arrow">+</span></button><div class="faq-a">Haan! Basic ad creatives, copy, aur scripts hum banate hain. Agar aapke paas apne product photos ya videos hain to aur bhi achha — lekin agar nahi hain to bhi hum kuch kar sakte hain.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Long-term contract toh nahi hai na?<span class="faq-arrow">+</span></button><div class="faq-a">Nahi. Hum monthly basis pe kaam karte hain. Koi 6 mahine ya 1 saal ka lock-in nahi hai. Aap results dekho, agar pasand aaye to continue karo. Yahi humara approach hai.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Updates kaise milenge — reports kahan dekhunga?<span class="faq-arrow">+</span></button><div class="faq-a">Aapko har week ek clear report milegi — plain Hindi/English mein, bina jargon ke. Saath mein WhatsApp pe hum available rehte hain for any questions anytime.</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-badge">🚀 Currently Accepting New Clients</div>
+  <h2>Let's Talk About<br><em>Growing Your Brand.</em></h2>
+  <p>Book a free 20-minute call. No pressure, no fake promises. We'll tell you honestly what ads can do for your business — and if we're the right fit, we'll get started fast.</p>
+  <div class="cta-btns">
+    <a href="tel:+919129883009" class="btn-primary" onclick="fbq('track','Lead',{content_name:'Book Free Call - CTA Section'})">Book a Free Call →</a>
+    <a href="mailto:clickforgeads@gmail.com" class="btn-secondary">clickforgeads@gmail.com</a>
+  </div>
+  <div class="cta-phone">WhatsApp or Call: <a href="tel:+919129883009">+91 91298 83009</a></div>
+  <div class="cta-note">Free call · No contract · Honest advice · Fast start</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="footer-logo">Click<span class="logo-forge">Forge</span> Ads</a>
+      <p class="footer-tagline">A young performance marketing agency from Lucknow helping small brands, local businesses, and startups grow through smart, affordable digital ads.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">in</a>
+        <a href="#" class="social-btn">ig</a>
+        <a href="#" class="social-btn">fb</a>
+        <a href="#" class="social-btn">yt</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Meta & Instagram Ads</a></li><li><a href="#services">Google Ads</a></li><li><a href="#services">WhatsApp Funnels</a></li><li><a href="#services">Ad Creatives</a></li><li><a href="#services">YouTube Ads</a></li><li><a href="#services">Reporting</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#results">Our Work</a></li><li><a href="#who">Who We Help</a></li><li><a href="#process">Our Process</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:clickforgeads@gmail.com">clickforgeads@gmail.com</a></li><li><a href="tel:+919129883009">+91 91298 83009</a></li><li><a href="#">Lucknow, Uttar Pradesh 🇮🇳</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ClickForge Ads. All rights reserved.</span>
+    <div style="display:flex;gap:18px;"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const ans = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); ans.classList.add('open'); }
+  }
+
+  const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.result-card,.service-card,.who-card,.testi-card').forEach(el => {
+    el.style.opacity = '0'; el.style.transition = 'opacity 0.5s ease';
+    cardObserver.observe(el);
+  });
+
+  function animateCount(id, end, prefix, suffix, decimals) {
+    const el = document.getElementById(id); if (!el) return;
+    let st = null;
+    function step(ts) {
+      if (!st) st = ts;
+      const p = Math.min((ts - st) / 2000, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = end * eased;
+      el.textContent = prefix + (decimals ? val.toFixed(decimals) : Math.floor(val)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  let animated = false;
+  const statsObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !animated) {
+        animated = true;
+        animateCount('s1', 12,  '₹', 'L+', 0);
+        animateCount('s2', 4.1, '',  '×',  1);
+        animateCount('s3', 38,  '−', '%',  0);
+        animateCount('s4', 20,  '',  '+',  0);
+        animateCount('s5', 4.8, '',  '★',  1);
+      }
+    });
+  }, { threshold: 0.3 });
+  const strip = document.querySelector('.stats-strip');
+  if (strip) statsObserver.observe(strip);
+
+  const wrap = document.getElementById('logo3d');
+  const inner = document.getElementById('logo3d-inner');
+  if (wrap && inner) {
+    document.addEventListener('mousemove', (e) => {
+      const r = wrap.getBoundingClientRect();
+      const dx = (e.clientX - (r.left + r.width/2)) / window.innerWidth;
+      const dy = (e.clientY - (r.top + r.height/2)) / window.innerHeight;
+      inner.style.transform = `rotateX(${-dy*22}deg) rotateY(${dx*22}deg) translateY(-8px)`;
+      inner.style.animation = 'none';
+    });
+    wrap.addEventListener('mouseleave', () => {
+      inner.style.transform = '';
+      inner.style.animation = 'floatY 3.5s ease-in-out infinite';
+    });
+  }
+</script>
+</body>
+</html>
